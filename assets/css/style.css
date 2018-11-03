@@ -63,3 +63,9 @@
 .reveal .table-elements td {
     vertical-align: top;
 }
+
+.reveal .table-elements td img {
+    margin: 0;
+    max-width: none;
+    max-height: none;
+}
