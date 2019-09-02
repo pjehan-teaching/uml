@@ -1,0 +1,217 @@
+<section id="sequence-diagram">
+
+    <section>
+        <h2>Diagramme de séquence</h2>
+        <h3>Catégorie : interaction</h3>
+    </section>
+
+    <section>
+        <h3>Définition</h3>
+        <blockquote>
+            <p>A sequence diagram describes an Interaction by focusing on the sequence of Messages that are exchanged, along with their corresponding OccurrenceSpecifications on the Lifelines.</p>
+            <cite>- Object Management Group</cite>
+        </blockquote>
+        <blockquote>
+            <p>Un diagramme de séquence est un diagramme qui représente la séquence de messages entre les objets au cours d'une interaction.</p>
+            <cite>- Wikipedia</cite>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3>Définition</h3>
+        <ul>
+            <li>Représentation des <strong>interactions</strong> entre les <strong>acteurs</strong> et les <strong>objets</strong></li>
+            <li>Insiste sur l’aspect <strong>temporel</strong> d’une action (chronologie d’envoie des messages)</li>
+            <li>Souvent utilisé pour représenter les instances de <strong>cas d’utilisation</strong></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Frame</td>
+                <td><img src="assets/images/frame.png" alt="Frame"></td>
+                <td>Elément permettant d'identifier un diagramme par son label.</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Lifeline</td>
+                <td><img src="assets/images/sequence-lifeline-rectangle.png" alt="Lifeline Rectangle"></td>
+                <td>
+                    <p>Représente un participant au diagramme de séquence sous forme de timeline.</p>
+                    <p>Des éléments <strong>Execution Specification</strong> ou <strong>Activation Bar</strong> représentés par un rectangle blanc permettent d'identifier les actions.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/sequence-lifeline-actor.png" alt="Lifeline Actor"></td>
+                <td>
+                    <p>Représente un acteur.</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <p>Entity-Control-Boundary (ECB) est un pattern d'architecture permettant de structurer les classes en fonction de leur responsabilité.</p>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="3">Lifeline</td>
+                <td><img src="assets/images/sequence-lifeline-entity.png" alt="Lifeline Entity"></td>
+                <td>
+                    <p>Représente un objet lié à des données systèmes (Client, Produit...).</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/sequence-lifeline-boundary.png" alt="Lifeline Boundary"></td>
+                <td>
+                    <p>Représente une interface ou un système / service externe (Base de données, Serveur proxy...).</p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="assets/images/sequence-lifeline-control.png" alt="Lifeline Control"></td>
+                <td>
+                    <p>Organise et planifie les intéractions. Généralement situé entre Entity et Boundary.</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <p>Les <strong>messages</strong> permettent de définir les intéractions entre les différents participants.</p>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Call</td>
+                <td><img src="assets/images/sequence-message-call.png" alt="Appel"></td>
+                <td>Représente une communication entre deux participants.</td>
+            </tr>
+            <tr>
+                <td>Async</td>
+                <td><img src="assets/images/sequence-message-async.png" alt="Async"></td>
+                <td>Représente une communication asynchrone entre deux participants. Ne bloque pas la lifeline de l'emetteur.</td>
+            </tr>
+            <tr>
+                <td>Return</td>
+                <td><img src="assets/images/sequence-message-return.png" alt="Retour"></td>
+                <td>Représente un retour communication entre deux participants.</td>
+            </tr>
+            <tr>
+                <td>Found</td>
+                <td><img src="assets/images/sequence-message-found.png" alt="Found"></td>
+                <td>Représente une communication entrante dont l'on connais le destinataire mais pas l'emetteur.</td>
+            </tr>
+            <tr>
+                <td>Lost</td>
+                <td><img src="assets/images/sequence-message-lost.png" alt="Lost"></td>
+                <td>Représente une communication sortante dont l'on ne connais pas le destinataire mais uniquement l'emetteur.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <p>Les <strong>messages</strong> permettent de définir les intéractions entre les différents participants.</p>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Self call</td>
+                <td><img src="assets/images/sequence-message-selfcall.png" alt="Self call"></td>
+                <td>Représente une communication d'une lifeline vers elle-même.</td>
+            </tr>
+            <tr>
+                <td>Destruction</td>
+                <td><img src="assets/images/sequence-message-destruction.png" alt="Destruction"></td>
+                <td>Représente la destruction (volontaire) d'une communication.</td>
+            </tr>
+            <tr>
+                <td>Fragment</td>
+                <td><img src="assets/images/sequence-fragment.png" alt="Fragment"></td>
+                <td>Permet d'isoler une partie du diagramme et de lui associer un comportement (boucle, condition, optionel, parallèle...).</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Exemple</h3>
+        <img src="assets/images/diagram-sequence-example.png" alt="Diagramme de séquence">
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Réalisez un diagramme de séquence pour représenter un formulaire de login.</p>
+        <div class="instructions">
+            <ol>
+                <li>L'internaute saisit son email + mot de passe.</li>
+                <li>Une validation est faite au niveau du navigateur.</li>
+                <li>
+                    Si la saisie est ok, une vérification est envoyée en base de données.
+                    <ul>
+                        <li>Si l'utilsateur existe, il est alors connecté et redirigé vers la page d'accueil.</li>
+                        <li>Sinon, le formulaire de login est à nouveau affiché.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Réalisez un diagramme de séquence pour représenter l'achat en ligne d'un ticket de cinéma.</p>
+        <img src="assets/images/diagram-usecase-cinema.png" alt="Cinema use case">
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Le client pourra afficher la liste des séances.</li>
+                <li>Il pourra choisir une séance pour afficher ensuite la liste des places disponibles.</li>
+                <li>Il pourra choisir une place et être ainsi redirigé vers la page de paiement.</li>
+                <li>
+                    Il pourra alors saisir ses données bancaires :
+                    <ol>
+                        <li>Le service externe Stripe se chargera alors de gérer le paiement (accepté ou refusé).</li>
+                        <li>L'utilisateur est ensuite notifié si son paiement est accepté ou refusé puis reçois une notification par mail via un service MailJet.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+</section>

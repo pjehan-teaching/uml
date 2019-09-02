@@ -2,6 +2,7 @@
 
     <section>
         <h2>Diagramme d'activité</h2>
+        <h3>Catégorie : comportement</h3>
     </section>
 
     <section>
@@ -103,15 +104,47 @@
 
     <section>
         <h3>Exemple</h3>
-        <img src="assets/images/activity-example.png" alt="Diagramme d'activité">
+        <img src="assets/images/diagram-activity-example.png" alt="Diagramme d'activité">
+    </section>
+
+    <section>
+        <h3>Diagramme d'état-machine</h3>
+        <div class="container">
+            <div class="col">
+                <p>Le diagramme d'état-machine est similaire au diagramme d'activité mais il <strong>représente des états et non des actions</strong>.</p>
+                <p>Il représente les <strong>états intermédiaire</strong> définis par les actions du diagramme d'activité.</p>
+            </div>
+            <div class="col">
+                <img src="assets/images/diagram-state-machine-example.png" alt="Diagramme état-machine">
+            </div>
+        </div>
     </section>
 
     <section>
         <h3>Exercice</h3>
+        <p>Réalisez un diagramme d'activité pour un distributeur de boisson.</p>
         <div class="instructions">
             <ol>
-                <li>Réalisez un diagramme d'activité pour un distributeur de boisson</li>
-                <li>Réalisez un diagramme d'activité pour réserver un billet de train</li>
+                <li>L'utilisateur insert une pièce de monnaie dans le distributeur puis choisit un produit.</li>
+                <li>Le produit est disponible ou non (si non, une demande de réapprovisionnement est envoyée).</li>
+                <li>Si le produit est disponible, le distributeur vérifie si il y a assez de pièces (si non, l'utilisateur devra insérer plus de pièces).</li>
+                <li>Le distributeur active ensuite le mécanisme et l'utilisateur peut alors récupérer le produit.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Réalisez un diagramme d'activité pour le déroulement d'un projet informatique.</p>
+        <div class="instructions">
+            <ol>
+                <li>Le client rédige une demande.</li>
+                <li>Le chef de projet rédige le cahier des charges par rapport à cette demande.</li>
+                <li>Le client valide le cahier des charges (si non, le chef de projet le modifie).</li>
+                <li>L'équipe de développement créée l'application demandée.</li>
+                <li>En parallèle, un manuel d'utilisation de l'application est rédigé.</li>
+                <li>Des tests sont réalisés (si ils ne sont pas validés, retour à l'équipe de développement).</li>
+                <li>L'application et le manuel d'utilisation sont envoyés au client.</li>
             </ol>
         </div>
     </section>

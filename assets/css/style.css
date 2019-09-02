@@ -52,6 +52,10 @@
     border: solid 2px #268bd2;
 }
 
+.reveal section h4 {
+    font-size: 1.2em;
+}
+
 .blocks-3 {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -68,4 +72,25 @@
     margin: 0;
     max-width: none;
     max-height: none;
+}
+
+.reveal .table-elements td[rowspan] {
+    border: none;
+}
+
+.reveal .uml-creator {
+    display: flex;
+}
+
+.reveal .uml-creator > .uml-creator-description {
+    padding: 15px;
+}
+
+.reveal .uml-creator > .uml-creator-description h4 {
+    text-align: left;
+}
+
+.reveal .uml-creator > .uml-creator-img-container {
+    height: 150px;
+    width: 150px;
 }

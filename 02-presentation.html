@@ -5,11 +5,65 @@
     </section>
 
     <section>
+        <h3>Problématique</h3>
+        <p>L'informatique est aujourd'hui utilisée massivement dans de <strong>nombreuses entreprises de différents secteurs d'activités</strong> (banque, industrie, communication...).</p>
+        <p>De plus, les <strong>technologies évoluent</strong> toujours plus rapidement (nouveaux langages, nouvelles versions, nouveaux frameworks...).</p>
+        <p>Ainsi, pour certaines applications ayant une <strong>durée de vie de plusieurs dizaines d'années</strong>, <strong>plusieurs équipes</strong> de développement peuvent être amenées à travailler sur un même projet.</p>
+    </section>
+
+    <section>
+        <h3>Problématique</h3>
+        <p>On constate alors l'apparition de plusieurs disfonctionnements :</p>
+        <ul>
+            <li>Evolution des logiciels en retard par rapport aux technologies</li>
+            <li>Nouvelles demandes des clients complexes à développer</li>
+            <li>Difficulté pour les développeurs de s'intégrer aux projets</li>
+        </ul>
+        <p>En conséquence, on observe alors que</p>
+        <ul>
+            <li>Peu de projet arrivent à terme</li>
+            <li>Peu de projet respectent les délais / budgets</li>
+            <li>Les projets sont souvent externalisés aux <abbr title="Entreprise de Services du Numérique">ESN</abbr></li>
+            <li>Les applications sont souvent instables</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Problématique</h3>
+        <p>Une étude réalisée par un groupe indépendant de recherche en informatique nous indique que de nombreux projets échouent (Failed) ou ne respectent pas les délais / budgets (Challenged).</p>
+        <canvas id="chart-chaos-per-year"></canvas>
+        <footer>
+            <a href="assets/files/CHAOSReport2015-Final.pdf" class="info" target="_blank">CHAOS Report 2015</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Problématique</h3>
+        <p>On observe également que les projets de grande taille ont une plus forte probabilité d'échouer.</p>
+        <canvas id="chart-chaos-per-size"></canvas>
+        <footer>
+            <a href="assets/files/CHAOSReport2015-Final.pdf" class="info" target="_blank">CHAOS Report 2015</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Causes</h3>
+        <ul>
+            <li>Applications complexes et spécifiques</li>
+            <li>Besoins mal rédigés</li>
+            <li>Evolution constante de la demande</li>
+            <li>Documentation insuffisante du projet</li>
+            <li>Manque de communication entre les équipes participant au projet</li>
+            <li>Tests insuffisants (méthode <abbr title="Tests Driven Development">TDD</abbr> non utilisée)</li>
+        </ul>
+    </section>
+
+    <section>
         <h3>Définition</h3>
         <div class="container">
             <div class="col">
                 <p>UML est un langage standardisé permettant de modéliser un système dans le domaine du développement informatique.</p>
-                <p>UML utilise de nombreux diagrammes permettant de visualiser, spécifier, concevoir et documenter une application.</p>
+                <p>UML utilise de nombreux diagrammes permettant de visualiser, spécifier, concevoir et documenter une application pour la plupart des systèmes et domaines d'activité.</p>
             </div>
             <div class="col">
                 <img src="assets/images/uml-logo.png" alt="Logo UML">
@@ -18,11 +72,81 @@
     </section>
 
     <section>
-        <h3>Historique</h3>
+        <h3>Définition</h3>
         <ul>
-            <li>Créer en 1994 par l'entreprise Rational Software</li>
+            <li><strong>Unified</strong> : Unification de plusieurs méthodes</li>
+            <li><strong>Modeling</strong> : Analyse et conception</li>
+            <li><strong>Language</strong> : Il s'agit d'un langage et non d'une méthode</li>
+        </ul>
+        <footer>
+            <a href="#" class="info">Un langage n'impose pas de processus</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Historique</h3>
+        <div class="uml-creator">
+            <div class="uml-creator-img-container">
+                <img src="assets/images/grady-booch.jpg" alt="Grady Booch">
+            </div>
+            <div class="uml-creator-description">
+                <h4>Grady Booch</h4>
+                <p>Booch method</p>
+                <p>Rational Software (racheté depuis par IBM)</p>
+            </div>
+        </div>
+        <div class="uml-creator">
+            <div class="uml-creator-img-container">
+                <img src="assets/images/jim-rumbaugh.jpg" alt="Jim Rumbaugh">
+            </div>
+            <div class="uml-creator-description">
+                <h4>Jim Rumbaugh</h4>
+                <p>OMT (Object Modeling Technique)</p>
+                <p>General Electric</p>
+            </div>
+        </div>
+        <div class="uml-creator">
+            <div class="uml-creator-img-container">
+                <img src="assets/images/ivar-jacobson.jpg" alt="Ivar Jacobson">
+            </div>
+            <div class="uml-creator-description">
+                <h4>Ivar Jacobson</h4>
+                <p>OOSE (Object-Oriented Software Engineering)</p>
+                <p>Objectory AB</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Historique</h3>
+        <p>En 1994, Jim Rumbaugh quitte General Electric pour rejoindre Rational Software puis l'année suivante, la société d'Ivar Jacobson est rachetée par Rational Software.</p>
+        <ul>
+            <li>Créé en 1994 par l'entreprise Rational Software</li>
             <li>Adopté en 1997 comme un standard par le consortium <a href="https://www.omg.org">Object Management Group</a></li>
             <li>Publié en 2005 par <a href="https://www.iso.org">l'organisation internationale de normalisation</a> (ISO)</li>
+        </ul>
+        <p>De nombreuses entreprises multinationales ont collaboré à la création d'UML (HP, Microsoft, IBM, Oracle...).</p>
+    </section>
+
+    <section>
+        <h3>Historique</h3>
+        <img src="assets/images/history.jpg" alt="Historique UML">
+    </section>
+
+    <section>
+        <h3>OMG (Object Management Group)</h3>
+        <p>Objectif : Standardiser et promouvoir le modèle objet</p>
+        <p>A l'origine de plusieurs standards :</p>
+        <ul>
+            <li>UML (Unified Modeling Language)</li>
+            <li>MOF (Meta Object Facility) : Représentations des métamodèles</li>
+            <li>CORBA (Common Object Request Broker Architecture) : Norme utilisée comme base pour faire communiquer des composants (utilise IDL)</li>
+            <li>IDL (Interface Definition Language) : Langage de définition des interfaces</li>
+        </ul>
+        <p>Et recommandations :</p>
+        <ul>
+            <li>MDA (Moden Driven Architecture) : Démarche de réalisation de logiciels</li>
+            <li>QVT (Query / View / Transformation) : Langage standardisé pour exprimer des transformations de modèles</li>
         </ul>
     </section>
 
@@ -97,6 +221,16 @@
     </section>
 
     <section>
+        <h3>Objectifs</h3>
+        <ul>
+            <li>Apporter aux utilisateurs un langage de modélisation commun afin de pouvoir échanger des informations de conception</li>
+            <li>Pouvoir étendre le langage pour repondre aux besoins spécifiques</li>
+            <li>Etre indépendant vis-à-vis des langages de programmation et des processus</li>
+            <li>Encourager le développement des concepts Orientés Objet</li>
+        </ul>
+    </section>
+
+    <section>
         <h3>Organisation des diagrammes</h3>
         <p>Les diagrammes peuvent être organisés en trois catégories principales :</p>
         <div class="container">
@@ -106,7 +240,7 @@
                     <li><strong>Diagramme de classe</strong></li>
                     <li>Diagramme de composants</li>
                     <li>Diagramme de structure composite</li>
-                    <li>Diagramme de déploiement</li>
+                    <li><strong>Diagramme de déploiement</strong></li>
                     <li>Diagramme d'objets</li>
                     <li>Diagramme des paquetages</li>
                     <li>Diagramme de profils</li>
@@ -119,9 +253,7 @@
                     <li><strong>Diagramme état-machine</strong></li>
                     <li><strong>Diagramme des cas d'utilisation</strong></li>
                 </ul>
-            </div>
-            <div class="col">
-                <h4>Interaction</h4>
+                <h5 style="margin-top: 1em;">Interaction</h5>
                 <ul style="font-size: 0.8em;">
                     <li>Diagramme de communication</li>
                     <li><strong>Diagramme de séquence</strong></li>
@@ -130,6 +262,32 @@
                 </ul>
             </div>
         </div>
+    </section>
+
+    <section>
+        <h3>Un bon modèle</h3>
+        <div class="container">
+            <div class="col">
+                <ul>
+                    <li>Simple à comprendre</li>
+                    <li>Respecte les standards</li>
+                    <li>Apporte une vision globale</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="assets/images/floor-plan.jpg" alt="Floor Plan">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Un bon modèle</h3>
+        <ol>
+            <li>Choisir le ou les modèles adaptés pour représenter une fonctionnalité</li>
+            <li>Adapter la granularité en fonction du besoin</li>
+            <li>Bien représenter la réalité</li>
+            <li>Préférer décomposer un système complexe en sous-ensembles</li>
+        </ol>
     </section>
 
 </section>

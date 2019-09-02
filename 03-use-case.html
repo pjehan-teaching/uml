@@ -2,6 +2,7 @@
 
     <section>
         <h2>Diagramme de cas d'utilisation</h2>
+        <h3>Catégorie : comportement</h3>
     </section>
 
     <section>
@@ -14,6 +15,16 @@
             <p>Les diagrammes de cas d'utilisation sont des diagrammes UML utilisés pour donner une vision globale du comportement fonctionnel d'un système logiciel.</p>
             <cite>- Wikipedia</cite>
         </blockquote>
+    </section>
+
+    <section>
+        <h3>Définition</h3>
+        <ul>
+            <li>Diagramme de <strong>comportement</strong> de <strong>haut niveau</strong></li>
+            <li>Définir l’ensemble des <strong>cas d’utilisation</strong> du système</li>
+            <li>Permettre l’identification des <strong>interactions</strong> entre le système et les <strong>acteurs</strong>.</li>
+            <li>Permettre le <strong>bornage</strong> du système</li>
+        </ul>
     </section>
 
     <section>
@@ -81,10 +92,30 @@
                 <td><img src="assets/images/usecase-extends.png" alt="Extends"></td>
                 <td>Permet d'étendre un autre cas d'utilisation. Ajoute des fonctionnalités optionnelles.</td>
             </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>Generalization</td>
                 <td><img src="assets/images/usecase-generalization.png" alt="Generalization"></td>
                 <td>Permet à un enfant d'hériter du comportement d'un parent.</td>
+            </tr>
+            <tr>
+                <td>Note</td>
+                <td><img src="assets/images/usecase-note.png" alt="Note"></td>
+                <td>Permet d'ajouter une note sur des associations.</td>
             </tr>
             </tbody>
         </table>
@@ -96,11 +127,47 @@
     </section>
 
     <section>
-        <h3>Exercice</h3>
+        <h3>Description</h3>
+        <p>Le cas d’utilisation peut-être doublé d’une description textuelle qui précise sa description :</p>
+        <ul>
+            <li>Nom</li>
+            <li>Objectif</li>
+            <li>Acteurs principaux & secondaires</li>
+            <li>Les pré-conditions (déclencheur de l’action)</li>
+            <li>Les post-conditions (déclencheur de la fin de l’action)</li>
+            <li>Séquencement des messages échangés</li>
+            <li>Séquences alternatives et des exceptions</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Exemple</h3>
+        <embed src="assets/files/use-case-description.pdf" type="application/pdf" width="100%" height="500">
+    </section>
+
+    <section>
+        <h3>Exercices</h3>
+        <p>La société WineTour organise des journées de dégustation de vin en bus dans différentes villes de France.</p>
+        <p>Après avoir échangé sur les besoins de cette société, vous souhaitez réalisez un diagramme de cas d'utilisation répondant aux demandes suivantes :</p>
         <div class="instructions">
             <ol>
-                <li>Réalisez un diagramme de cas d'utilisation l'achat d'un billet d'avion</li>
-                <li>Réalisez un diagramme de cas d'utilisation pour la gestion des commentaires sur un blog</li>
+                <li>Un trajet en bus comprend plusieurs passagés et un guide</li>
+                <li>Le guide sera chargé d'effectuer des enregistrements groupés pour l'ensemble des clients</li>
+                <li>Certains clients peuvent aussi choisir d'effectuer eux-même l'enregistrement (individuellement)</li>
+                <li>Les passagés pourront éventuellement enregistrer un ou plusieurs bagages</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercices</h3>
+        <p>Un aéroport souhaite mettre en place un système de réservation de billet d'avion en ligne.</p>
+        <p>Après avoir échangé sur les besoins de cette société, vous souhaitez réalisez un diagramme de cas d'utilisation répondant aux demandes suivantes :</p>
+        <div class="instructions">
+            <ol>
+                <li>Un client doit pouvoir effectuer une réservation en ligne choisir également le nombre de places qu'il souhaite réserver</li>
+                <li>A la suite d'une réservation, un client doit pouvoir effectuer une demande de modification. Cette demande sera validée ou non par la compagnie aérienne.</li>
+                <li>A la suite d'une réservation, un client doit pouvoir effectuer une demande de remboursement si le vol est annulé. Cette demande sera validée ou non par la compagnie aérienne.</li>
             </ol>
         </div>
     </section>
