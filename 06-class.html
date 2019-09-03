@@ -2,6 +2,7 @@
 
     <section>
         <h2>Diagramme de classe</h2>
+        <h3>Catégorie : Structure</h3>
     </section>
 
     <section>
@@ -73,12 +74,54 @@
                 <td>Réprésente une relation logique entre deux classes. L'appel d'une méthode peut par exemple être représentée sous la forme d'une association.</td>
             </tr>
             <tr>
-                <td>Inheritance</td>
-                <td><img src="assets/images/class-inheritance.png" alt="Inheritance"></td>
-                <td>Représente un héritage entre deux classes.</td>
+                <td>Unidirectional association</td>
+                <td><img src="assets/images/class-association-unidirectional.png" alt="Unidirectional association"></td>
+                <td>Réprésente une relation logique à sens unique entre deux classes.</td>
+            </tr>
+            <tr>
+                <td>Dependency</td>
+                <td><img src="assets/images/class-dependency.png" alt="Dependency"></td>
+                <td>Représente une dépendance entre deux classes. Si la définition d'une classe est modifiée, cela peut potentiellement entraîner des problèmes dans les classes dépendantes.</td>
             </tr>
             </tbody>
         </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <p>Il est possible d'utiliser des cardinalités pour préciser le nombre d'entités associées.</p>
+        <div class="container">
+            <div class="col">
+                <table style="font-size: 0.8em;">
+                    <tbody>
+                    <tr>
+                        <td>0..1</td>
+                        <td>Zéro ou une instance</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Une et une seule instance</td>
+                    </tr>
+                    <tr>
+                        <td>0..* ou *</td>
+                        <td>Zéro ou plusieurs instances</td>
+                    </tr>
+                    <tr>
+                        <td>1..*</td>
+                        <td>Une ou plusieurs instances</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <img src="assets/images/class-association-multiplicity.png" alt="Cardinalités exemple">
+                <p><code class="language-php">Class1</code> est lié à 1 <code class="language-php">Class2</code></p>
+                <p><code class="language-php">Class2</code> est lié à * <code class="language-php">Class1</code></p>
+            </div>
+        </div>
+        <footer>
+            <a href="#" class="warning">Le sens des cardinalité est inversé par rapport à Merise !</a>
+        </footer>
     </section>
 
     <section>
@@ -93,6 +136,16 @@
             </thead>
             <tbody>
             <tr>
+                <td>Inheritance</td>
+                <td><img src="assets/images/class-inheritance.png" alt="Inheritance"></td>
+                <td>Représente un héritage entre deux classes.</td>
+            </tr>
+            <tr>
+                <td>Implementation</td>
+                <td><img src="assets/images/class-implementation.png" alt="Implementation"></td>
+                <td>Représente l'implémentation d'une interface par une classe.</td>
+            </tr>
+            <tr>
                 <td>Aggregation</td>
                 <td><img src="assets/images/class-aggregation.png" alt="Aggregation"></td>
                 <td>Représente une relation de subordination entre deux classes. Cela permet d'identifier une classe qui contiendra une collection d'autres classes.</td>
@@ -100,20 +153,193 @@
             <tr>
                 <td>Composition</td>
                 <td><img src="assets/images/class-composition.png" alt="Composition"></td>
-                <td>Représente une relation forte entre deux classes. Par exemple une voiture à un moteur et si la voiture est détruite, le moteur le sera également.</td>
-            </tr>
-            <tr>
-                <td>Dependency</td>
-                <td><img src="assets/images/class-dependency.png" alt="Dependency"></td>
-                <td>Représente une dépendance entre deux classes. Si la définition d'une classe est modifiée, cela peut potentiellement entraîner des problèmes dans les classes dépendantes.</td>
+                <td>Représente une relation forte entre deux classes. Si Class1 est détruite, Class2 sera également détruite.</td>
             </tr>
             </tbody>
         </table>
     </section>
 
     <section>
+        <h3>Forward engineering : Class</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-example.png" alt="Class Person" style="min-width: 250px;">
+            </div>
+            <div class="col">
+<pre style="max-height: 400px;"><code class="language-php">class Person {
+    private string $firstname;
+    private string $lastname;
+    private \DateTime $birthdate;
+
+    public function setFirstname(string $firstname): self {
+        $this->firstname = $firstname;
+        return $this;
+    }
+
+    public function setLastname(string $lastname): self {
+        $this->lastname = $lastname;
+        return $this;
+    }
+
+    public function getFullname(): string {
+        return $this->firstname . " " . $this->lastname;
+    }
+
+    public function setBirthdate(\DateTime $birthdate): self {
+        $this->birthdate = $birthdate;
+        return $this;
+    }
+
+    public function getAge(): int {
+        return (new \DateTime())->diff($this->birthdate)->y;
+    }
+}</code></pre>
+            </div>
+        </div>
+        <footer>
+            <a href="#" class="info" style="font-size: 0.7em;">La classe <code class="language-php">Person</code> comprend 3 attributs privés afin de respecter le principe d'<strong>encapsulation</strong></a>
+            <a href="#" class="info" style="font-size: 0.7em;">Les setters retournent l'instance de la classe afin de mettre en place le design pattern <strong>Fluent</strong></a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Association</h3>
+
+    </section>
+
+    <section>
+        <h3>Forward engineering : Inheritance</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-inheritance-example.png" alt="Inheritance example">
+            </div>
+            <div class="col">
+<pre style="max-height: 400px;"><code class="language-php">class Person {
+    public string $firstname;
+    public string $lastname;
+
+    public function getFullname(): string {
+        return $this->firstname . " " . $this->lastname;
+    }
+}</code></pre>
+<pre style="max-height: 400px;"><code class="language-php">class Employee extends Person {
+    public float $salary;
+
+    public function getFullname(): string {
+        return parent::getFullname() . " (employee)";
+    }
+}</code></pre>
+            </div>
+        </div>
+        <footer>
+            <a href="#" class="info" style="font-size: 0.9em;">La méthode <code class="language-php">getFullname()</code> est surchargée par la classe <code class="language-php">Employee</code></a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Implementation</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-implementation-example.png" alt="Implementation example">
+            </div>
+            <div class="col">
+<pre style="max-height: 400px;"><code class="language-php">interface Weightable {
+    public function getWeight(): float;
+}</code></pre>
+<pre><code class="language-php">class Person implements Weightable {
+    public string $firstname;
+    public string $lastname;
+    public float $weight;
+
+    public function getWeight(): float {
+        return $this->weight;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Implementation</h3>
+        <p>L'exemple précédent pourrait permettre de définir plusieurs classes implémentant l'interface <code class="language-php">Weightable</code>.</p>
+        <p>Dans le cas d'une compagnie aérienne, nous pourrions par exemple avoir une autre classe <code class="language-php">Lugguage</code> implémentant également l'interface <code class="language-php">Weightable</code></p>
+        <p>Cela permettrait ensuite d'écrire une fonction qui permettrait de calculer le poids total transporté :</p>
+<pre style="max-height: 400px;"><code class="language-php">function getTotalWeight(Collection&lt;Weightable&gt; $items) {
+    $total = 0;
+    foreach($items as $item) {
+        $total += $item->getWeight();
+    }
+    return $total;
+}</code></pre>
+        <footer>
+            <a href="#" class="info">C'est le principe du polymorphisme qui utilisé</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Aggregation</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-aggregation-example.png" alt="Aggregation">
+            </div>
+            <div class="col">
+<pre><code class="language-php">class Car {
+    public string $model;
+    private Engine $engine;
+
+    public function __construct(Engine $engine)
+    {
+        $this->engine = $engine;
+    }
+}</code></pre>
+<pre><code class="language-php">class Engine {
+    public int $power;
+    public string $energy;
+}</code></pre>
+            </div>
+        </div>
+        <p>Si la voiture a un accident, le moteur peut être retiré et installé sur un autre véhicule.</p>
+        <footer>
+            <a href="#" class="info">On utilise l'injection de dépendance pour définir le moteur</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Composition</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-composition-example.png" alt="Composition">
+            </div>
+            <div class="col">
+<pre><code class="language-php">class Person implements Weightable {
+    public string $firstname;
+    public string $lastname;
+    private Head $head;
+
+    public function __construct()
+    {
+        $this->head = new Head();
+    }
+}</code></pre>
+<pre><code class="language-php">class Head {
+    public string $hairColor;
+}</code></pre>
+            </div>
+        </div>
+        <footer>
+            <a href="#" class="info">L'instance de <code class="language-php">Head</code> est créée dans le constructeur de <code class="language-php">Person</code></a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Principes de la POO</h3>
+        <p><strong>Composition over inheritance</strong> : Préférer utiliser le principe de composition plutôt que l'héritage</p>
+        <p><strong>Program to an 'interface', not an 'implementation'</strong> : Favoriser l'utilisation d'interfaces plutôt que des classes concrètes.</p>
+    </section>
+
+    <section>
         <h3>Exemple</h3>
-        <img src="assets/images/class-example.png" alt="Diagramme de classe">
+        <img src="assets/images/diagram-class-example.png" alt="Diagramme de classe">
     </section>
 
     <section>
