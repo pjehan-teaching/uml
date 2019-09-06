@@ -12,7 +12,7 @@
             <cite>- Object Management Group</cite>
         </blockquote>
         <blockquote>
-            <p>Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que les différentes relations entre celles-ci.</p>
+            <p>Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les <strong>classes et les interfaces</strong> des systèmes ainsi que les différentes <strong>relations</strong> entre celles-ci.</p>
             <cite>- Wikipedia</cite>
         </blockquote>
     </section>
@@ -30,16 +30,22 @@
             <tbody>
             <tr>
                 <td>Class</td>
-                <td><img src="assets/images/class-class.png" alt="Class"></td>
-                <td>Elément permettant d'identifier une classe du diagramme. Si le nom de la classe est en italic, il s'agit alors d'une classe abstraite. Si il est entouré des caractères "<< >>", il s'agit d'une interface.</td>
+                <td>
+                    <img src="assets/images/class-class.png" alt="Class">
+                    <img src="assets/images/class-class-abstract.png" alt="Abstract Class">
+                    <img src="assets/images/class-interface.png" alt="Interface">
+                </td>
+                <td>
+                    <p>Elément permettant d'identifier une classe du diagramme.</p>
+                    <p>Si le nom de la classe est en italic et précédé de &lt;&lt;Abstract&gt;&gt;, il s'agit alors d'une classe abstraite.</p>
+                    <p>Si le nom de la classe est précédé de &lt;&lt;Interface&gt;&gt;, il s'agit alors d'une interface.</p>
+                </td>
             </tr>
             <tr>
                 <td>Attribute</td>
                 <td><img src="assets/images/class-attribute.png" alt="Attribute"></td>
                 <td>
-                    <p>Attribut associé à une classe.</p>
-
-                    <p>Les symboles suivants permettent de définir la visibilité :</p>
+                    <p>Attribut associé à une classe. Les symboles suivants permettent de définir la visibilité :</p>
                     <ul>
                         <li>+ public</li>
                         <li>- private</li>
@@ -71,7 +77,7 @@
             <tr>
                 <td>Association</td>
                 <td><img src="assets/images/class-association.png" alt="Association"></td>
-                <td>Réprésente une relation logique entre deux classes. L'appel d'une méthode peut par exemple être représentée sous la forme d'une association.</td>
+                <td>Réprésente une relation logique entre deux classes. Souvent impliqué par un <strong>attribut</strong> de la classe.</td>
             </tr>
             <tr>
                 <td>Unidirectional association</td>
@@ -81,7 +87,7 @@
             <tr>
                 <td>Dependency</td>
                 <td><img src="assets/images/class-dependency.png" alt="Dependency"></td>
-                <td>Représente une dépendance entre deux classes. Si la définition d'une classe est modifiée, cela peut potentiellement entraîner des problèmes dans les classes dépendantes.</td>
+                <td>Représente une dépendance entre deux classes. Souvent impliqué par le type d'un paramètre ou du retour d'une <strong>méthode</strong>.</td>
             </tr>
             </tbody>
         </table>
@@ -346,8 +352,39 @@
         <h3>Exercice</h3>
         <div class="instructions">
             <ol>
-                <li>Réalisez un diagramme de classe pour gérer des dossiers et des fichiers</li>
-                <li>Réalisez un diagramme de classe pour gérer des recettes de cuisine</li>
+                <li>Créer un diagramme de classe permettant de <strong>choisir un algorithme de température</strong> (l'unité de base sera le celsius)</li>
+                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
+            </ol>
+        </div>
+        <figure>
+            <img src="assets/images/class-design-pattern-strategy.png" alt="Strategy">
+            <figcaption>Design pattern Strategy</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Créez un diagramme de classe pour représenter des <strong>produits</strong> ayant un prix</li>
+                <li>Si le prix d'un produit est mis à jour, les <strong>utilisateurs abonnés</strong> au produit doivent être <strong>notifiés</strong></li>
+                <li>Utilisez le design pattern <strong>Observer</strong> pour gérer le système de notification</li>
+                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Créez un diagramme de classe pour gérer des <strong>dossiers et des fichiers</strong></li>
+                <li>Les dossiers et les fichiers doivent avoir un <strong>nom</strong> ainsi qu'une <strong>date de création</strong></li>
+                <li>Un dossier peut contenir des <strong>sous-dossiers et/ou des fichiers</strong></li>
+                <li>Un fichier à une <strong>extension</strong></li>
+                <li>Il est possible d'<strong>ouvrir un dossier</strong> (pour récupérer une liste des sous-dossiers + fichiers) <strong>ou un fichier</strong> (récupéré au format txt)</li>
+                <li>Il est possible de connaître le <strong>poid d'un fichier</strong> et de <strong>calculer le poid d'un dossier</strong></li>
+                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
             </ol>
         </div>
     </section>

@@ -78,6 +78,15 @@
     border: none;
 }
 
+.reveal section figure img {
+    margin-bottom: 0;
+}
+
+.reveal section figure figcaption {
+    font-size: 0.6em;
+    font-style: italic;
+}
+
 .reveal .uml-creator {
     display: flex;
 }
