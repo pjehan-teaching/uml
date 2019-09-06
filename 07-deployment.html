@@ -1,0 +1,113 @@
+<section id="deployment">
+
+    <section>
+        <h2>Diagramme de déploiement</h2>
+        <h3>Catégorie : Structure</h3>
+    </section>
+
+    <section>
+        <h3>Présentation</h3>
+        <blockquote>
+            <p>Deployments capture relationships between logical and/or physical elements of systems and information technology assets assigned to them.</p>
+            <cite>- Object Management Group</cite>
+        </blockquote>
+        <blockquote>
+            <p>Le diagramme de déploiement est une vue statique qui sert à représenter l'utilisation de l'<strong>infrastructure physique</strong> par le système et la manière dont les <strong>composants du système sont répartis ainsi que leurs relations</strong> entre eux.</p>
+            <cite>- Wikipedia</cite>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Frame</td>
+                <td><img src="assets/images/frame.png" alt="Frame"></td>
+                <td>Elément permettant d'identifier un diagramme par son label.</td>
+            </tr>
+            <tr>
+                <td>Node</td>
+                <td><img src="assets/images/deployment-node.png" alt="Node"></td>
+                <td>Permet d'identifier les éléments physiques du système (serveur web, serveur de base de données...).</td>
+            </tr>
+            <tr>
+                <td>Component</td>
+                <td><img src="assets/images/deployment-component.png" alt="Component"></td>
+                <td>Représente une application, un logiciel.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Artifact</td>
+                <td><img src="assets/images/deployment-artifact.png" alt="Artifact"></td>
+                <td>Représente une partie d'une application (un fichier texte, binaire, une table en base de données...).</td>
+            </tr>
+            <tr>
+                <td>Association</td>
+                <td><img src="assets/images/deployment-association.png" alt="Association"></td>
+                <td>Permet de relier des éléments entre eux.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Exemple</h3>
+        <img src="assets/images/diagram-deployment-example.png" alt="Diagramme de déploiement">
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Créer un diagramme de déploiement pour la mise en ligne d'un site WordPress</li>
+                <li>Il n'y aura qu'un seul serveur hébergeant les fichiers du site internet et la base de données MySQL</li>
+                <li>
+                    Lors de la mise en ligne, il faut effectuer plusieurs modification (utilisez des notes pour les schématiser) :
+                    <ul>
+                        <li>Modifier les infos de connexion à la BDD dans le fichier wp-config.php</li>
+                        <li>Modifier les lignes "site_url" et "home" dans la table "wp_options"</li>
+                        <li>Mettre à jour le fichier .htaccess à la racine du site</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <div class="instructions">
+            <ol>
+                <li>Créer un diagramme de déploiement pour la mise en ligne d'une appli web / mobile</li>
+                <li>L'application web sera déployée sur un serveur et utilisera la technologie ReactJS et le serveur web Apache</li>
+                <li>L'application mobile sera déployée sur un autre serveur et utilisera la technologie ReactNative</li>
+                <li>Ces deux technologies utilisant le gestionnaire de packet NPM, NodeJS devra être installé</li>
+                <li>La commande <code class="language-shell">npm run build</code> permettra de générer l'application en production</li>
+                <li>Le déploiement étant réalisé via Git, il devra également être installé sur ces serveurs</li>
+                <li>Enfin, un 3ème serveur permettra de gérer la base de données MongoDB</li>
+            </ol>
+        </div>
+    </section>
+
+</section>
