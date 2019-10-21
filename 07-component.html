@@ -1,0 +1,98 @@
+<section id="deployment">
+
+    <section>
+        <h2>Diagramme de composant</h2>
+        <h3>Catégorie : Structure</h3>
+    </section>
+
+    <section>
+        <h3>Présentation</h3>
+        <blockquote>
+            <p>A Component represents a modular part of a system that encapsulates its contents and whose manifestation is replaceable within its environment.</p>
+            <cite>- Object Management Group</cite>
+        </blockquote>
+        <blockquote>
+            <p>Le diagramme de composants décrit l'<strong>organisation du système</strong> du point de vue des éléments logiciels comme les modules, les données ou encore les éléments de configuration. Ce diagramme permet de mettre en évidence les <strong>dépendances entre les composants</strong> (qui utilise quoi).</p>
+            <cite>- Wikipedia</cite>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Frame</td>
+                <td><img src="assets/images/frame.png" alt="Frame"></td>
+                <td>Elément permettant d'identifier un diagramme par son label.</td>
+            </tr>
+            <tr>
+                <td>Component</td>
+                <td><img src="assets/images/component-component.png" alt="Component"></td>
+                <td>Permet d'identifier les <strong>éléments physiques</strong> ou <strong>logiciels</strong> du système.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Principaux éléments graphiques</h3>
+        <table class="table-elements">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Représentation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Interface</td>
+                <td><img src="assets/images/component-interface.png" alt="Interface"></td>
+                <td>
+                    <ul>
+                        <li>Provided Interface : Interface schématisée par un cercle représentant une <strong>interface exposée</strong>.</li>
+                        <li>Required Interface : Interface schématisée par un arc de cercle représentant une <strong>interface requise</strong>.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td><img src="assets/images/component-port.png" alt="Port"></td>
+                <td>Permet d'indiquer qu'un composant <strong>n'inclue pas directement une interface</strong> mais utilise une classe interne pour exposer une interface.</td>
+            </tr>
+            <tr>
+                <td>Dependency</td>
+                <td><img src="assets/images/component-dependency.png" alt="Dependency"></td>
+                <td>Représente une <strong>dépendance</strong> entre deux composants.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Exemple</h3>
+        <img src="assets/images/diagram-component-example.png" alt="Diagramme de composant">
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
+        <p>Représentez le diagramme de composant d'un système de gestion d'entreprise en respectant les règles suivantes :</p>
+        <div class="instructions">
+            <ol>
+                <li>L'application est découpée en 2 grandes parties : Production et Comptabilité</li>
+                <li>La partie Production contient un composant permettant de gérer les projets</li>
+                <li>La partie Comptabilité contient un composant permettant de gérer les clients et un autre pour la facturation (devis + factures)</li>
+                <li>Un projet doit être associé à un client et la génération de devis / facture est réalisée à partir des données d'un projet</li>
+            </ol>
+        </div>
+    </section>
+
+</section>
