@@ -364,6 +364,42 @@
 
     <section>
         <h3>Exercice</h3>
+        <p>Créer un diagramme de classe pour une application de gestion d'une école.</p>
+        <div class="instructions">
+            <ol>
+                <li>Il y aura 3 types d'utilisateurs (étudiant, enseignant et administration)</li>
+                <li>Les étudiants auront des cours d'une matière, dans une salle avec un enseignant</li>
+                <li>Les étudiants pourront avoir des notes associées à une matière</li>
+                <li>Chaque salle pourra contenir zéro ou plusieurs ordinateurs</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>Exercice (suite)</h3>
+        <p>Dans le but de réaliser des économie d'énergie, l'école souhaiterait ajuster la chaleur de chaque salle en fonction du nombre d'étudiants et des ordinateurs présent à l'intérieur.</p>
+        <p>Pour cela, elle souhaiterait pouvoir utiliser une librairie déjà existante :</p>
+        <pre><code class="language-php">interface Heatable {
+    public function getWatts(): float;
+}</code></pre>
+        <pre><code class="language-php">interface Sizeable {
+    public function getHeight(): int;
+    public function getWidth(): int;
+    public function getLength(): int;
+}</code></pre>
+        <pre><code class="language-php">function getHeatingPower(Sizeable $room, Collection&lt;Heatable&gt; $elements) {
+    $space = $room->getHeight() * $room->getWidth() * $room->getLength();
+    $totalWatts = 0;
+    foreach ($element in $elements) { $totalWatts += $element->getWatts(); }
+    return ($space * 20) - $totalWatts;
+}</code></pre>
+        <footer>
+            <a href="https://energieplus-lesite.be/evaluer/bureautique2/evaluer-les-charges-thermiques-dues-aux-equipements/" class="info" target="_blank">Personne ~ 70W / Ordinateur ~ 80W</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Exercice</h3>
         <div class="instructions">
             <ol>
                 <li>Créez un diagramme de classe pour représenter des <strong>produits</strong> ayant un prix</li>
