@@ -1,5 +1,6 @@
 import Prism from 'prismjs';
 import Chart from 'chart.js';
+import './js/tabs';
 import './css/style.scss';
 
 document.getElementById('revealexpress').addEventListener('loaded', function(event) {

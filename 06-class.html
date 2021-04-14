@@ -172,7 +172,18 @@
                 <img src="assets/images/class-example.png" alt="Class Person" style="min-width: 250px;">
             </div>
             <div class="col">
-<pre style="max-height: 400px;"><code class="language-php">class Person {
+                <div class="tabs-container">
+                    <ul class="tabs-buttons-container">
+                        <li>
+                            <button class="tab-button active" data-target="tab-php">PHP</button>
+                        </li>
+                        <li>
+                            <button class="tab-button" data-target="tab-java">Java</button>
+                        </li>
+                    </ul>
+                    <div class="tabs">
+                        <div class="tab-php active">
+                            <pre style="max-height: 400px;"><code class="language-php">class Person {
     private string $firstname;
     private string $lastname;
     private \DateTime $birthdate;
@@ -200,6 +211,42 @@
         return (new \DateTime())->diff($this->birthdate)->y;
     }
 }</code></pre>
+                        </div>
+                        <div class="tab-java">
+<pre style="max-height: 400px;"><code class="language-java">import java.util.Date;
+
+public class Person {
+    private String firstname;
+    private String lastname;
+    private Date birthdate;
+
+    public Person setFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public Person setLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public String getFullname() {
+        return this.firstname + " " + this.lastname;
+    }
+
+    public Person setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
+        return this;
+    }
+
+    public int getAge() {
+        // TODO: Implement age calculation
+        return 0;
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
@@ -210,7 +257,54 @@
 
     <section>
         <h3>Forward engineering : Association</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-association-example.png" alt="Association">
+            </div>
+            <div class="col">
+<pre><code class="language-php">class Order {
+    private Customer $customer;
+}</code></pre>
+<pre><code class="language-php">class Customer {
+    private string $firstName;
+    private string $lastLame;
+    private array $orders;
+}</code></pre>
+            </div>
+        </div>
+    </section>
 
+    <section>
+        <h3>Forward engineering : Unidirectional Association</h3>
+        <div class="container">
+            <div class="col">
+                <img src="assets/images/class-association-unidirectional-example.png" alt="Unidirectional Association">
+            </div>
+            <div class="col">
+<pre><code class="language-php">class Order {
+    private Customer $customer;
+}</code></pre>
+                <pre><code class="language-php">class Customer {
+    private string $firstName;
+    private string $lastLame;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Forward engineering : Association Dependency</h3>
+        <img src="assets/images/class-dependency-example.png" alt="Association Dependency">
+<pre><code class="language-php">class Invoice {
+    private string $fileName;
+
+    public function generatePdf(Order $order): void {
+        // TODO: Generate PDF file from Order object
+    }
+}</code></pre>
+                <pre><code class="language-php">class Order {
+    private Customer $customer;
+}</code></pre>
     </section>
 
     <section>
