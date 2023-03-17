@@ -1,5 +1,5 @@
 import Prism from 'prismjs';
-import Chart from 'chart.js';
+import {Chart, CategoryScale, LinearScale, BarController, BarElement} from 'chart.js';
 import './js/tabs';
 import './css/style.scss';
 
@@ -7,9 +7,13 @@ document.getElementById('revealexpress').addEventListener('loaded', function(eve
 
   Prism.highlightAll();
 
-  Chart.defaults.global.defaultFontSize = 22;
+  Chart.defaults.font.size = 22;
+  Chart.register(CategoryScale);
+  Chart.register(LinearScale);
+  Chart.register(BarController);
+  Chart.register(BarElement);
 
-  new Chart(document.getElementById('chart-chaos-per-year').getContext('2d'), {
+  new Chart(document.getElementById('chart-chaos-per-year'), {
     type: 'bar',
     data: {
       labels: ['2011', '2012', '2013', '2014', '2015'],
@@ -36,13 +40,17 @@ document.getElementById('revealexpress').addEventListener('loaded', function(eve
     },
     options: {
       scales: {
-        xAxes: [{ stacked: true }],
-        yAxes: [{ stacked: true }],
+        x: {
+          stacked: true,
+        },
+        y: {
+          stacked: true
+        }
       }
     }
   });
 
-  new Chart(document.getElementById('chart-chaos-per-size').getContext('2d'), {
+  new Chart(document.getElementById('chart-chaos-per-size'), {
     type: 'bar',
     data: {
       labels: ['grand', 'large', 'medium', 'moderate', 'small'],
@@ -69,8 +77,12 @@ document.getElementById('revealexpress').addEventListener('loaded', function(eve
     },
     options: {
       scales: {
-        xAxes: [{ stacked: true }],
-        yAxes: [{ stacked: true }],
+        x: {
+          stacked: true,
+        },
+        y: {
+          stacked: true
+        }
       }
     }
   });
