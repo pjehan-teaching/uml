@@ -3,6 +3,7 @@ module.exports = {
   stylesheets: ['assets/chartjs/Chart.min.css', 'assets/css/style.css'],
   javascripts: ['assets/chartjs/Chart.bundle.min.js', 'assets/js/script.js'],
   revealjs: {
+    width: 1280,
     maxScale: 0.9,
     margin: 0.1,
   }
