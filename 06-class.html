@@ -15,6 +15,9 @@
             <p>Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les <strong>classes et les interfaces</strong> des systèmes ainsi que les différentes <strong>relations</strong> entre celles-ci.</p>
             <cite>- Wikipedia</cite>
         </blockquote>
+        <footer>
+            <a href="https://www.uml-diagrams.org/class-diagrams.html" class="info" target="_blank">Diagrammes de classe - uml-diagrams.org</a>
+        </footer>
     </section>
 
     <section>
@@ -98,7 +101,7 @@
         <p>Il est possible d'utiliser des cardinalités pour préciser le nombre d'entités associées.</p>
         <div class="container">
             <div class="col">
-                <table style="font-size: 0.8em;">
+                <table class="text-80">
                     <tbody>
                     <tr>
                         <td>0..1</td>
@@ -169,7 +172,7 @@
         <h3>Forward engineering : Class</h3>
         <div class="container">
             <div class="col">
-                <img src="assets/images/class-example.png" alt="Class Person" style="min-width: 250px;">
+                <img src="assets/images/class-example.png" alt="Class Person" class="min-width-250">
             </div>
             <div class="col">
                 <div class="tabs-container">
@@ -183,7 +186,7 @@
                     </ul>
                     <div class="tabs">
                         <div class="tab-php active">
-                            <pre style="max-height: 400px;"><code class="language-php">class Person {
+                            <pre class="pre-scroll"><code class="language-php">class Person {
     private string $firstname;
     private string $lastname;
     private \DateTime $birthdate;
@@ -213,7 +216,7 @@
 }</code></pre>
                         </div>
                         <div class="tab-java">
-<pre style="max-height: 400px;"><code class="language-java">import java.util.Date;
+<pre class="pre-scroll"><code class="language-java">import java.util.Date;
 
 public class Person {
     private String firstname;
@@ -250,8 +253,8 @@ public class Person {
             </div>
         </div>
         <footer>
-            <a href="#" class="info" style="font-size: 0.7em;">La classe <code class="language-php">Person</code> comprend 3 attributs privés afin de respecter le principe d'<strong>encapsulation</strong></a>
-            <a href="#" class="info" style="font-size: 0.7em;">Les setters retournent l'instance de la classe afin de mettre en place le design pattern <strong>Fluent</strong></a>
+            <a href="#" class="info text-70">La classe <code class="language-php">Person</code> comprend 3 attributs privés afin de respecter le principe d'<strong>encapsulation</strong></a>
+            <a href="https://martinfowler.com/bliki/FluentInterface.html" class="info text-70" target="_blank">Les setters retournent l'instance de la classe afin de mettre en place le design pattern <strong>Fluent</strong></a>
         </footer>
     </section>
 
@@ -399,7 +402,7 @@ public class Person {
                     </ul>
                     <div class="tabs">
                         <div class="tab-php active">
-<pre style="max-height: 400px;"><code class="language-php">class Person {
+<pre class="pre-scroll"><code class="language-php">class Person {
     public string $firstname;
     public string $lastname;
 
@@ -407,7 +410,7 @@ public class Person {
         return $this->firstname . " " . $this->lastname;
     }
 }</code></pre>
-<pre style="max-height: 400px;"><code class="language-php">class Employee extends Person {
+<pre class="pre-scroll"><code class="language-php">class Employee extends Person {
     public float $salary;
 
     public function getFullname(): string {
@@ -416,7 +419,7 @@ public class Person {
 }</code></pre>
                         </div>
                         <div class="tab-java">
-<pre style="max-height: 400px;"><code class="language-java">class Person {
+<pre class="pre-scroll"><code class="language-java">class Person {
     private String firstname;
     private String lastname;
 
@@ -424,7 +427,7 @@ public class Person {
         return this.firstname + " " + this.lastname;
     }
 }</code></pre>
-<pre style="max-height: 400px;"><code class="language-java">class Employee extends Person {
+<pre class="pre-scroll"><code class="language-java">class Employee extends Person {
     private float salary;
 
     public String getFullname() {
@@ -437,7 +440,7 @@ public class Person {
             </div>
         </div>
         <footer>
-            <a href="#" class="info" style="font-size: 0.9em;">La méthode <code class="language-php">getFullname()</code> est surchargée par la classe <code class="language-php">Employee</code></a>
+            <a href="#" class="info text-90">La méthode <code class="language-php">getFullname()</code> est surchargée par la classe <code class="language-php">Employee</code></a>
         </footer>
     </section>
 
@@ -459,7 +462,7 @@ public class Person {
                     </ul>
                     <div class="tabs">
                         <div class="tab-php active">
-<pre style="max-height: 400px;"><code class="language-php">interface Weightable {
+<pre class="pre-scroll"><code class="language-php">interface Weightable {
     public function getWeight(): float;
 }</code></pre>
 <pre><code class="language-php">class Person implements Weightable {
@@ -473,7 +476,7 @@ public class Person {
 }</code></pre>
                         </div>
                         <div class="tab-java">
-<pre style="max-height: 400px;"><code class="language-java">interface Weightable {
+<pre class="pre-scroll"><code class="language-java">interface Weightable {
     public float getWeight();
 }</code></pre>
 <pre><code class="language-java">class Person implements Weightable {
@@ -509,7 +512,7 @@ public class Person {
             </ul>
             <div class="tabs">
                 <div class="tab-php active">
-<pre style="max-height: 400px;"><code class="language-php">function getTotalWeight(Collection&lt;Weightable&gt; $items) {
+<pre class="pre-scroll"><code class="language-php">function getTotalWeight(Collection&lt;Weightable&gt; $items) {
     $total = 0;
     foreach($items as $item) {
         $total += $item->getWeight();
@@ -518,7 +521,7 @@ public class Person {
 }</code></pre>
                 </div>
                 <div class="tab-java">
-<pre style="max-height: 400px;"><code class="language-java">float getTotalWeight(Collection&lt;Weightable&gt; items) {
+<pre class="pre-scroll"><code class="language-java">float getTotalWeight(Collection&lt;Weightable&gt; items) {
     float total = 0;
     for(Weightable item : items) {
         total += item.getWeight();
@@ -586,7 +589,7 @@ public class Person {
         </div>
         <p>Si la voiture a un accident, le moteur peut être retiré et installé sur un autre véhicule.</p>
         <footer>
-            <a href="#" class="info">On utilise l'injection de dépendance pour définir le moteur</a>
+            <a href="https://martinfowler.com/articles/injection.html" class="info" target="_blank">On utilise l'injection de dépendance pour définir le moteur</a>
         </footer>
     </section>
 
@@ -771,7 +774,7 @@ public class Person {
             </ol>
         </div>
         <footer>
-            <a href="#" class="info">Vous pouvez utiliser le design pattern <strong>Composite</strong></a>
+            <a href="https://refactoring.guru/fr/design-patterns/composite" class="info" target="_blank">Vous pouvez utiliser le design pattern <strong>Composite</strong></a>
         </footer>
     </section>
 
