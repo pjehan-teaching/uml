@@ -36,7 +36,7 @@
                     <img src="assets/images/class-interface.png" alt="Interface">
                 </td>
                 <td>
-                    <p>Elément permettant d'identifier une classe du diagramme.</p>
+                    <p>Élément permettant d'identifier une classe du diagramme.</p>
                     <p>Si le nom de la classe est en italic et précédé de &lt;&lt;Abstract&gt;&gt;, il s'agit alors d'une classe abstraite.</p>
                     <p>Si le nom de la classe est précédé de &lt;&lt;Interface&gt;&gt;, il s'agit alors d'une interface.</p>
                 </td>
@@ -126,7 +126,7 @@
             </div>
         </div>
         <footer>
-            <a href="#" class="warning">Le sens des cardinalité est inversé par rapport à Merise !</a>
+            <a href="#" class="warning">Le sens des cardinalités est inversé par rapport à Merise !</a>
         </footer>
     </section>
 
@@ -495,7 +495,7 @@ public class Person {
     <section>
         <h3>Forward engineering : Implementation</h3>
         <p>L'exemple précédent pourrait permettre de définir plusieurs classes implémentant l'interface <code class="language-php">Weightable</code>.</p>
-        <p>Dans le cas d'une compagnie aérienne, nous pourrions par exemple avoir une autre classe <code class="language-php">Lugguage</code> implémentant également l'interface <code class="language-php">Weightable</code></p>
+        <p>Dans le cas d'une compagnie aérienne, nous pourrions par exemple avoir une autre classe <code class="language-php">Luggage</code> implémentant également l'interface <code class="language-php">Weightable</code></p>
         <p>Cela permettrait ensuite d'écrire une fonction qui permettrait de calculer le poids total transporté :</p>
 
         <div class="tabs-container">
@@ -655,7 +655,7 @@ public class Person {
         <h3>SOLID</h3>
         <p><strong>Single-responsibility principle</strong> : Chaque classe ne doit avoir qu'une seule responsabilité.</p>
         <p><strong>Open–closed principle</strong> : Le code doit être ouvert à l'extension mais fermé à la modification.</p>
-        <p><strong>Liskov substitution principle</strong> : Une fonction utilisant la référence d'un type doit pouvoir utiliser utiliser les références de ses sous-types sans les connaître.</p>
+        <p><strong>Liskov substitution principle</strong> : Une fonction utilisant la référence d'un type doit pouvoir utiliser les références de ses sous-types sans les connaître.</p>
         <p><strong>Interface segregation principle</strong> : Plusieurs interfaces spécifiques sont meilleures qu'une seule interface générique.</p>
         <p><strong>Dependency inversion principle</strong> : Dépendre des abstractions et non des implémentations.</p>
     </section>
@@ -670,7 +670,7 @@ public class Person {
         <div class="instructions">
             <ol>
                 <li>Créer un diagramme de classe permettant de <strong>choisir un algorithme de température</strong> (l'unité de base sera le celsius)</li>
-                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
+                <li>Écrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
             </ol>
         </div>
         <figure>
@@ -752,7 +752,7 @@ public class Person {
                 <li>Créez un diagramme de classe pour représenter des <strong>produits</strong> ayant un prix</li>
                 <li>Si le prix d'un produit est mis à jour, les <strong>utilisateurs abonnés</strong> au produit doivent être <strong>notifiés</strong></li>
                 <li>Utilisez le design pattern <strong>Observer</strong> pour gérer le système de notification</li>
-                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
+                <li>Écrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
             </ol>
         </div>
     </section>
@@ -764,10 +764,10 @@ public class Person {
                 <li>Créez un diagramme de classe pour gérer des <strong>dossiers et des fichiers</strong></li>
                 <li>Les dossiers et les fichiers doivent avoir un <strong>nom</strong> ainsi qu'une <strong>date de création</strong></li>
                 <li>Un dossier peut contenir des <strong>sous-dossiers et/ou des fichiers</strong></li>
-                <li>Un fichier à une <strong>extension</strong></li>
+                <li>Un fichier a une <strong>extension</strong></li>
                 <li>Il est possible d'<strong>ouvrir un dossier</strong> (pour récupérer une liste des sous-dossiers + fichiers) <strong>ou un fichier</strong> (récupéré au format txt)</li>
-                <li>Il est possible de connaître le <strong>poid d'un fichier</strong> et de <strong>calculer le poid d'un dossier</strong></li>
-                <li>Ecrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
+                <li>Il est possible de connaître le <strong>poids d'un fichier</strong> et de <strong>calculer le poids d'un dossier</strong></li>
+                <li>Écrire ensuite le <strong>code source correspondant</strong> en utilisant le langage orienté objet de votre choix</li>
             </ol>
         </div>
         <footer>
