@@ -37,6 +37,13 @@
     max-height: 400px;
   }
 
+  mark {
+    background: linear-gradient(180deg, transparent 50%, #cbdbe7 50%);
+    color: inherit;
+    padding: 0 0.3em;
+    box-decoration-break: clone;
+  }
+
   ul.blocks {
     display: grid;
     grid-column-gap: 1em;
